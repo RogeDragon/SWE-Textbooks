@@ -14,6 +14,7 @@ using std::cin, std::cout, std::endl;
 using std::string;
 using std::getline;
 
+
 int main(){
     /*
     string word;
@@ -39,6 +40,7 @@ int main(){
     }
     */
 
+    /*
     string random = "hello, How are you?"; 
     string &temp = random;
 
@@ -49,6 +51,25 @@ int main(){
     }
 
     cout << temp << endl;
+    */
+
+    /*
+    string raw_string = "This is the inputted string";
+    string result(raw_string);
+
+    for (int i = 0; i < result.size(); i++){
+        if (!isblank(result[i])){
+            result[i] = 'X';
+        }
+    }
+
+    cout << result << endl;
+
+    */
+
+    string s;
+    cout << &s << endl;
+    
 
     return 0;
 }
