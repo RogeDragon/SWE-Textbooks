@@ -27,8 +27,22 @@ int main(){
         v1.push_back(i); // the push_back command adds to a vector
     }
 
+    // this is an example from the textbook
+    vector<unsigned int> clustered_scores(11, 0);
+
+    unsigned grade;
+    while(cin >> grade){
+        if (grade<=100){
+            ++clustered_scores[grade/10]; //fecthing and then preincrementing
+        }
+    }
+
+    for (auto r: clustered_scores){
+        cout << r << " ";
+    }
+    cout << endl;
+
+
+
     return 0;
 }
-
-
-// this is how you make a two dimensional vector vector<vector<int>>
