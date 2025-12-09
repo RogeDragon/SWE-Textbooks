@@ -69,7 +69,6 @@ int main(){
 
     string s;
     cout << &s << endl;
-    
 
     return 0;
 }
