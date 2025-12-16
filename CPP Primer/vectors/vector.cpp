@@ -44,3 +44,6 @@ int main(){
 
     return 0;
 }
+
+
+// this symbol -> dereferences and fetches the data member that is specified
