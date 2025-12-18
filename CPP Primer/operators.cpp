@@ -9,6 +9,7 @@ using std::cin;
 using std::endl;
 
 int main() {
+    /*
     int i;
     double d;
 
@@ -36,6 +37,22 @@ int main() {
     cin >> b;
 
     cout << (a + 4, b + 4, a + b) << endl;
+    */
+    
+
+    // how a twos complement number is represented in memory
+    //-8   4   2   1   
+    //1   0   1   0   // loses the ability to represent numbers above eight.
+
+
+    //looking at type conversions between shorts and ints.
+    unsigned short example_short = 0;
+    example_short = ~example_short;
+
+    cout << "The biggest 'unsigned short' variable is: " << example_short << endl;
+    
+    auto example_int = example_short + 1;
+    cout << "checking if example int converted into a integer: " << example_int << endl;
 
     return 0;
 }
