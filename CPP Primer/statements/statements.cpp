@@ -40,7 +40,6 @@ int main(){
         cout << "The current number is: " >> a >> endl;
     }
 
-
     return 0;
 }
 
