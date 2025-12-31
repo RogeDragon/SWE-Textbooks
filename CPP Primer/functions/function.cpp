@@ -1,11 +1,13 @@
 
 #include <iostream>
 #include <string>
+#include <initializer_list>
 
 #include <iterator>
 
 using std::cout, std::cin, std::endl;
 using std::string;
+using std::initializer_list;
 
 
 //this function resets the value at the pointer
@@ -30,8 +32,14 @@ void PrintArray(int *begin, int *end){
     int counter = 0;
 
     while (begin != end){
-        cout << "The value of at index" << counter << "is: "<< *begin++ << endl;
+        cout << "The value of at index " << counter << " is: "<< *begin++ << endl;
         counter++;
+    }
+}
+
+void VarArgs(initializer_list<int> l1){
+    for (auto start = l1.begin(), last = l1.end(); start != last; start++){
+        cout << "Arguments passed into function: " << *start << endl;
     }
 }
 
@@ -39,7 +47,7 @@ void PrintArray(int *begin, int *end){
 int main(){
 
     //this section is messing around with static local variables
-    for (int x = 10; x < 100; x++){
+    for (int x = 10; x < 20; x++){
         cout << "The value of the static varaible is: " << StaticVariableTesting() << endl;
     }
 
@@ -75,6 +83,12 @@ int main(){
     //printing the contents of an array
     int my_array[] = {1, 2, 3, 4, 5};
     PrintArray(std::begin(my_array), std::end(my_array));
+
+    cout << endl;
+    cout << endl;
+
+    //Messing about with varaible arguments in c++
+    VarArgs({1, 2, 3, 4, 5});
 
     return 0;
 }
