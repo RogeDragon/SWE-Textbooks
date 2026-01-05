@@ -4,6 +4,8 @@
 #include <initializer_list>
 
 #include <iterator>
+#include <cassert>
+
 
 using std::cout, std::cin, std::endl;
 using std::string;
@@ -42,6 +44,7 @@ void VarArgs(initializer_list<int> l1){
         cout << "Arguments passed into function: " << *start << endl;
     }
 }
+
 
 
 int main(){
@@ -92,4 +95,6 @@ int main(){
 
     return 0;
 }
+
+
 
