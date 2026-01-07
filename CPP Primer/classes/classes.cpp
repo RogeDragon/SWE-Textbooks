@@ -24,22 +24,34 @@ struct fruit {
     int NumBites;
     int Size;
 
+    std::string Name;
+
     fruit() { // This is the default constructor in c++
         NumBites = 0;
         Size = 100;
+        Name = "Apple";
+
         std::cout << "Wow, Look at this massive fruit" << std::endl;
     }
 
-    fruit(int NumBites, int Size) { // this is a constructor that you will find in any other langauge
-        this->NumBites = NumBites;
-        this->Size = Size;
-    }
+    /*
+    you can also define a default constructor like this:
+    fruit() = default;
+    defualt, just intialises all member variables to default
+    */
+
+    fruit(int NumBites, int Size, std::string Name) : NumBites(NumBites), Size(Size), Name(Name)  {}
 
     inline void EatFruit() {NumBites++;}
 };
 
-int main(){
+//messing about withoperator overloading
+std::ostream& operator<< (std::ostream &out, fruit &Fruit){
+        out << Fruit.Name;
+        return out;
+}
 
+int main(){
     // for enums, you can intilaise them in 3 different ways
     Colour Apple{red};
     Colour Blueberry = blue;
