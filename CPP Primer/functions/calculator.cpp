@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 
-
 // this peice of code is so I can mess about with function pointers
 using operation = double(double, double);
 

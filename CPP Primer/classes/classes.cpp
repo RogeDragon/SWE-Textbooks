@@ -20,6 +20,27 @@ enum Colour {
     green
 };
 
+enum class Animal {
+    pig,
+    chicken,
+    goat,
+};
+
+/*
+std::string GetAnimalName(Animal animal){
+    using enum Animal;
+
+    switch (animal){
+        case pig: return "pig";
+        case chicken: return "chicken";
+        case goat: return "goat";
+        default: return "unknown";
+    }
+
+    return "unknown";
+}
+*/
+
 struct fruit {
     int NumBites;
     int Size;
@@ -59,6 +80,8 @@ int main(){
 
     //enums are great for switch statements, switch statements only take int values
     Colour value = red;
+
+    std::cout << __cplusplus <<  std::endl;
 
     switch (value){
         case red:
