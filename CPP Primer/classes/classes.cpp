@@ -41,6 +41,12 @@ std::string GetAnimalName(Animal animal){
 }
 */
 
+/*
+    you can also define a default constructor like this:
+    fruit() = default;
+    defualt, just intialises all member variables to default
+*/
+
 struct fruit {
     int NumBites;
     int Size;
@@ -52,16 +58,11 @@ struct fruit {
         Size = 100;
         Name = "Apple";
 
-        std::cout << "Wow, Look at this massive fruit" << std::endl;
+        std::cout << "Wow, Look at this massive fruit, defualt constructor used!" << std::endl;
     }
 
-    /*
-    you can also define a default constructor like this:
-    fruit() = default;
-    defualt, just intialises all member variables to default
-    */
-
-    fruit(int NumBites, int Size, std::string Name) : NumBites(NumBites), Size(Size), Name(Name)  {}
+    fruit(const fruit& Fruit): NumBites(Fruit.NumBites), Size(Fruit.Size) {std::cout << "Wow, the copy constructor was used!" << std::endl;}// this is the copy constructor
+    fruit(int NumBites, int Size, std::string Name) : NumBites(NumBites), Size(Size), Name(Name) {}
 
     inline void EatFruit() {NumBites++;}
 };
@@ -72,6 +73,8 @@ std::ostream& operator<< (std::ostream &out, fruit &Fruit){
         return out;
 }
 
+
+
 int main(){
     // for enums, you can intilaise them in 3 different ways
     Colour Apple{red};
@@ -80,8 +83,6 @@ int main(){
 
     //enums are great for switch statements, switch statements only take int values
     Colour value = red;
-
-    std::cout << __cplusplus <<  std::endl;
 
     switch (value){
         case red:
@@ -93,6 +94,4 @@ int main(){
         case green:
         break;
     }
-
-    return 0;
 }
