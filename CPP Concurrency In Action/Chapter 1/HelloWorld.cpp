@@ -16,3 +16,30 @@ int main(){
 
     return 0;
 }
+
+/*
+My goal is to build a networking game. A way to do this is maybe through this
+
+std::vector<Player*> players;
+bool server_running = true;
+
+void PlayerClient(){
+    *Player playerobj; // probs best to default intialis
+    players.push_back(playerobj);
+
+    while (//player connected, IDK){
+        playerobj->recordInputs();
+        playerobj->update(&players);
+        playerobj->sendinfo();
+    }
+} 
+
+int main(){
+    
+
+
+
+    return 0;
+}
+
+*/
