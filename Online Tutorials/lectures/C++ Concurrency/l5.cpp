@@ -13,7 +13,6 @@ void foo(std::promise<std::string> &&prms) {
 
 
 int main(){
-
     //there is a std function that abstracts this away, std::async
     //promise and future are special data structure for returning values, protects access
     std::promise<std::string> prms;
@@ -37,4 +36,10 @@ Unique data has a problem, how can we pass the data back to the main thread?
 The Two Paradigms:
 shared data: using locks to protect
 unique data: using futures
+
+you cannot use unique data everywhere. In fact, it is best to use it only when you are
+dividing up tasks. 
+
+Task vs Thread Based Programming
+
 */
